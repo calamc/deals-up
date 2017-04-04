@@ -1,3 +1,5 @@
-DealsUP
-Meteor and React
-Cathal McArdle
+# DealsUP  
+
+Meteor and React  
+
+**Cathal McArdle**
