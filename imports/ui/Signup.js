@@ -26,10 +26,6 @@ export default class Signup extends React.Component {
         this.setState({error: ''});
       }
     });
-
-    // this.setState({
-    //   error: 'Ooops error'
-    // });
   }
   render() {
     return (
