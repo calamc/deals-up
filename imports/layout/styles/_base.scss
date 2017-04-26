@@ -1,0 +1,55 @@
+* {
+  margin: 0;
+  padding: 0;
+  // box-sizing: border-box;
+}
+
+html {
+  // base font size 16 * .625 = 10
+  // using rem units
+  font-size: 62.5%;
+}
+
+header {
+  background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(images/hhhimg.jpg);
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-text-box {
+  position: absolute;
+  width: 114rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  text-transform: uppercase;
+  word-spacing: .4rem;
+  letter-spacing: .2rem;
+}
+
+body {
+  font-size: $font-size;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+h1 {
+  font-weight: 300;
+  margin-bottom: $spacing;
+}
+
+a {
+  color: #000;
+}
+
+p {
+  margin-bottom: $spacing;
+}
+
+input[type=text], input[type=email], input[type=password] {
+  font-size: $font-size;
+  margin-bottom: $spacing;
+  padding: $input-spacing;
+  border: 1px solid $input-border;
+}

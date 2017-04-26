@@ -1,0 +1,15 @@
+.header {
+  background: $blue-sea;
+  color: #fff;
+}
+
+.header__title {
+  margin: 0;
+}
+.header__insideWrapper {
+  margin: 0 auto;
+  max-width: $app-max-width;
+  display: flex;
+  justify-content: space-between;
+  padding: $spacing;
+}

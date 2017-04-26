@@ -1,0 +1,59 @@
+.btn {
+  background-color: $blue-sea;
+  border: none;
+  color: $btn-color;
+  cursor: pointer;
+  padding: $input-spacing;
+  text-transform: uppercase;
+  font-size: $font-size;
+  margin-bottom: $spacing;
+  font-weight: 600;
+}
+
+// modifier
+.btn--link {
+  display: inline-block;
+  text-decoration: none;
+}
+
+// button: homepage
+.btn-home {
+  display: inline-block;
+  text-decoration: none;
+  padding: $input-spacing;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: $font-size;
+  border: 2px solid #FFF;
+  color: #FFF;
+  background-color: $blue-sea;
+}
+
+.btn-home:link,
+.btn-home:visited {
+  display: inline-block;
+  text-decoration: none;
+  padding: $input-spacing;
+  font-weight: 300;
+  letter-spacing: .2rem;
+  cursor: pointer;
+  font-size: $font-size;
+  border: 2px solid #FFF;
+  color: #FFF;
+  background-color: $blue-sea;
+  transition: background-color 0.2s;
+}
+
+.btn-home:hover,
+.btn-home:active {
+  background-color: #1496BB;
+}
+
+.btn-dashboard-header-text {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  text-transform: none;
+  background: none;
+  font-weight: 400 !important;
+}

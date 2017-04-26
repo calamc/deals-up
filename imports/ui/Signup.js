@@ -1,8 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router';
 import { Accounts } from 'meteor/accounts-base';
+import { createContainer } from 'meteor/react-meteor-data';
 
-export default class Signup extends React.Component {
+export class Signup extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -19,7 +20,7 @@ export default class Signup extends React.Component {
       return this.setState({error: 'Password must be more than 6 characters'});
     }
 
-    Accounts.createUser({email, password}, (err) => {
+    this.props.createUser({email, password}, (err) => {
       if (err) {
         this.setState({error: err.reason});
       } else {
@@ -29,19 +30,29 @@ export default class Signup extends React.Component {
   }
   render() {
     return (
-      <div>
-        <h1>Sign up to DealsUP</h1>
+      <div className="boxed-view">
+        <div className="boxed-view__whitebox">
+          <h1>Sign up: DealsUP</h1>
+          {this.state.error ? <p>{this.state.error}</p> : undefined}
+          <form className="boxed-view__form" onSubmit={this.onSubmit.bind(this)} noValidate>
+            <input type="email" name="email" ref="email" placeholder="Enter your email"/>
+            <input type="password" name="password" ref="password" placeholder="Create new password"/>
+            <button className="btn">Create Account</button>
+          </form>
 
-        {this.state.error ? <p>{this.state.error}</p> : undefined}
-
-        <form onSubmit={this.onSubmit.bind(this)} noValidate>
-          <input type="email" name="email" ref="email" placeholder="Email"/>
-          <input type="password" name="password" ref="password" placeholder="Password"/>
-          <button>Create your Account</button>
-        </form>
-
-        <Link to="/login">Already registered? Log in here.</Link>
+          <Link to="/login">Registered? Log in here.</Link>
+        </div>
       </div>
     );
   }
 }
+
+Signup.propTypes = {
+  createUser:React.PropTypes.func.isRequired
+};
+
+export default createContainer(() => {
+  return {
+    createUser: Accounts.createUser
+  }
+}, Signup);

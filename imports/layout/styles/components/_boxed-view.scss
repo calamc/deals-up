@@ -1,0 +1,28 @@
+// containes styles for box like view -- login and signup
+// using bem naming
+
+.boxed-view {
+  background: $boxed-view-background;
+  // viewport height
+  // takes up the full page
+  // vw - view width
+  width: 100vw;
+  // vh - view height
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.boxed-view__whitebox {
+  background-color: $boxed-view-whitebox;
+  padding: 4.2rem;
+  text-align: center;
+  width: 32rem;
+  border: 1px solid $blue-sea;
+}
+
+.boxed-view__form {
+  display: flex;
+  flex-direction: column;
+}

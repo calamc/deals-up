@@ -1,0 +1,17 @@
+// partial file - loads in other partials
+@import './variables';
+
+// have variables before base is loaded
+@import './base';
+
+// Boxed view
+@import './components/boxed-view';
+
+// Button
+@import './components/button';
+
+// Header
+@import './components/header';
+
+// Dashboard page content
+@import './components/dashboard-page-content';
