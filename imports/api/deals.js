@@ -67,10 +67,10 @@ Meteor.methods({
     return Deals.insert({
       title: '',
       description: '',
-      price: '',
-      category: '',
+      //price: '',
+      //category: '',
       ownerId: this.userId,
-      createdAt: moment().valueOf(),
+      //createdAt: moment().valueOf(),
       updatedAt: moment().valueOf()
     });
   },
@@ -87,13 +87,14 @@ Meteor.methods({
     }).validate({_id});
     Deals.remove({_id, ownerId: this.userId});
   },
-  'deals.update'(_id, dealUpdates) {
+  'deals.update'(_id, updates) {
     if (!this.userId) {
       throw new Meteor.Error('you-are-not-allowed-to-update-deals')
     }
     new SimpleSchema({
       _id: {
-        type: String
+        type: String,
+        min: 1
       },
       title: {
         type: String,
@@ -102,27 +103,28 @@ Meteor.methods({
       description: {
         type: String,
         optional: true
-      },
-      price: {
-        type: Number,
-        optional: true
-      },
-      category: {
-        type: String,
-        optional: true
       }
+      // price: {
+      //   type: Number,
+      //   optional: true
+      // },
+      // category: {
+      //   type: String,
+      //   optional: true
+      // }
     }).validate({
       _id,
       // spread out th updates object
-      ...dealUpdates
+      ...updates
     });
+
     Deals.update({
       _id,
       ownerId: this.userId
     }, {
       $set: {
         updatedAt: moment().valueOf(),
-        ...dealsUpdates
+        ...updates
       }
     });
   }

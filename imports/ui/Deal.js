@@ -2,6 +2,7 @@ import React from 'react';
 
 import { Deals } from '../api/deals';
 import DealList from './DealList';
+import Edit from './Edit';
 
 import PrivateHeaderNav from './PrivateHeaderNav';
 
@@ -12,6 +13,7 @@ export default () => {
         <div className="content">
           <p>Add deals</p>
           <DealList/>
+          <Edit/>
         </div>
       </div>
     );
