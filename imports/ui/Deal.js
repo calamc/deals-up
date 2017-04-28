@@ -1,20 +1,12 @@
 import React from 'react';
+import { Link } from 'react-router';
 
-import { Deals } from '../api/deals';
-import DealList from './DealList';
-import Edit from './Edit';
-
-import PrivateHeaderNav from './PrivateHeaderNav';
-
-export default () => {
+export default class Deal extends React.Component {
+  render() {
     return (
-      <div>
-        <PrivateHeaderNav title="Deals Administration"/>
-        <div className="content">
-          <p>Add deals</p>
-          <DealList/>
-          <Edit/>
-        </div>
+      <div className="content">
+        Deal
       </div>
     );
-};
+  }
+}

@@ -19,10 +19,10 @@ export default class DashboardControls extends React.Component {
             <div className="icon fa fa-comment"></div>
             <div className="flex-wrap__text">Message</div>
           </div>
-          <div className="flex-wrap__item">
+          <Link to="/logs" className="flex-wrap__item">
             <div className="icon fa fa-thumb-tack"></div>
-            <div className="flex-wrap__text">Log</div>
-          </div>
+            <div className="flex-wrap__text">Logs</div>
+          </Link>
         </div>
       </div>
     );

@@ -1,0 +1,91 @@
+.log-edit {
+  background: #fff;
+  border: 1px solid $light-grey;
+  width:100%;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+}
+
+.log__title {
+  border: none;
+  border-bottom: 1px solid $dark-grey;
+  font-size: 2rem;
+  padding: 1.4rem;
+  margin-bottom: 2rem;
+  outline: none;
+}
+
+.log__description {
+  flex-grow: 1;
+  font-weight: 300;
+  padding: 1.4rem;
+  resize: none;
+  margin-bottom: 2rem;
+  outline: none;
+}
+
+.log__btn {
+  background-color: #c0392b;
+  border: none;
+  color: $btn-color;
+  cursor: pointer;
+  padding: $input-spacing;
+  text-transform: uppercase;
+  font-size: $font-size;
+  margin-bottom: $spacing;
+  font-weight: 300;
+}
+
+.log__topMessage {
+  text-align: center;
+  font-style: oblique;
+}
+
+.log__itemList {
+  font-style: oblique;
+  padding: 1.4rem;
+  text-align: center;
+}
+
+.log__itemListHeader {
+  display: flex;
+  flex-direction: column;
+  padding-left: 1.4rem;
+}
+
+////////////////
+
+.log {
+  cursor: pointer;
+  padding: 1.4rem;
+  border-left: 4px solid transparent;
+  transition: background-color .3s ease, border-left .3s ease;
+}
+
+.log:hover {
+  background-color: #fff;
+  border-left: 4px solid $blue-sea;
+}
+
+.log--selDealId, .log--selDealId:hover {
+  background-color: #fff;
+  border-left: 4px solid $blue-sea;
+}
+
+.log__item--title {
+  font-weight: normal;
+  font-size: 1.4rem;
+  margin-bottom: .2rem;
+}
+
+.log--selDealId, .log__item--title {
+  font-weight: bold;
+}
+
+.log__item--date {
+  color: $dark-grey;
+  font-style: italic;
+  margin: 0;
+  padding: .6rem;
+}

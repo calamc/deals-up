@@ -13,13 +13,13 @@ Tracker.autorun(() => {
   onAuthChanged(isAuth, curPgPrivacy);
 });
 Tracker.autorun(() => {
-  const selDealId = Session.get('selDealId');
-  if (selDealId) {
-    browserHistory.replace(`/deals/${selDealId}`);
+  const selLogId = Session.get('selLogId');
+  if (selLogId) {
+    browserHistory.replace(`/logs/${selLogId}`);
   }
 });
 
 Meteor.startup(() => {
-  Session.set('selDealId', undefined);
+  Session.set('selLogId', undefined);
   ReactDOM.render(routes, document.getElementById('app'));
 });

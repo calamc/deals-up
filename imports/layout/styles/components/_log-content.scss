@@ -1,0 +1,28 @@
+.log-content {
+  max-width: 100rem;
+  margin: 0 auto;
+  padding:2rem $spacing;
+  display: flex;
+  height: calc(100vh - 5rem);
+}
+
+.log-content__sidescroller {
+  width: 35rem;
+  display: flex;
+  padding-right: 2rem;
+}
+
+.log-content__main {
+  width: 65rem;
+  display: flex;
+}
+
+// note
+.log-list {
+  background-color: #fff;
+  border: 1px solid $dark-grey;
+  width:100%;
+  overflow-y: scroll;
+}
+
+// note lst

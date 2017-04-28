@@ -23,3 +23,4 @@ fortawesome:fontawesome
 momentjs:moment
 react-meteor-data@=0.2.9
 session
+uploadcare:uploadcare-widget

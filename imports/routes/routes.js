@@ -8,7 +8,7 @@ import Home from '../ui/Home';
 import Signup from '../ui/Signup';
 import Login from '../ui/Login';
 import Dashboard from '../ui/Dashboard';
-import Deal from '../ui/Deal';
+import Log from '../ui/Log';
 import Pnf from '../ui/Pnf';
 
 //const unauthPages = ['/login', '/signup'];
@@ -26,11 +26,11 @@ import Pnf from '../ui/Pnf';
 //   }
 // };
 // deal page
-const onEnterDealPage = (nextState) => {
-  Session.set('selDealId', nextState.params.id);
+const onEnterLogPage = (nextState) => {
+  Session.set('selLogId', nextState.params.id);
 };
-const onLeaveDealPage = () => {
-  Session.set('selDealId', undefined);
+const onLeaveLogPage = () => {
+  Session.set('selLogId', undefined);
 };
 
 export const onAuthChanged = (isAuth, curPgPrivacy) => {
@@ -60,9 +60,11 @@ export const routes = (
       <Route path="/signup" component={Signup} secure="unauth" />
       <Route path="/login" component={Login} secure="unauth" />
       <Route path="/dashboard" component={Dashboard} secure="auth" />
-      <Route path="/deals" component={Deal} secure="auth" />
-      <Route path="/deals/:id" component={Deal}secure="auth" onEnter={onEnterDealPage} onLeave={onLeaveDealPage}/>
+      {/* <Route path="/deals" component={Deal} secure="auth" />
+      <Route path="/deals/:id" component={Deal} secure="auth"/> */}
+      <Route path="/logs" component={Log} secure="auth" />
+      <Route path="/logs/:id" component={Log} secure="auth" onEnter={onEnterLogPage} onLeave={onLeaveLogPage}/>
       <Route path="*" component={Pnf}/>
     </Route>
   </Router>
-)
+);

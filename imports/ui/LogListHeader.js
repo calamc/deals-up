@@ -4,20 +4,20 @@ import { Meteor } from 'meteor/meteor';
 //import { Deals } from '../api/deals';
 import { Session } from 'meteor/session';
 
-export const DealListHeader = (props) => {
+export const LogListHeader = (props) => {
   return (
-    <div>
-        <button onClick={() => {
-          props.meteorCall('deals.insert', (err, res) => {
+    <div className="log__itemListHeader">
+        <button className="btn" onClick={() => {
+          props.meteorCall('logs.insert', (err, res) => {
             if (res) {
               // set selected deal id
-              props.Session.set('selDealId', res);
+              props.Session.set('selLogId', res);
             }
-          });}}>New Deal</button>
+          });}}>New Log</button>
     </div>
   );
 };
-DealListHeader.propTypes = {
+LogListHeader.propTypes = {
   meteorCall: React.PropTypes.func.isRequired,
   Session: React.PropTypes.object.isRequired
 };
@@ -26,4 +26,4 @@ export default createContainer(() => {
     meteorCall: Meteor.call,
     Session
   };
-}, DealListHeader);
+}, LogListHeader);
