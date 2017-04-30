@@ -6,6 +6,7 @@ import { Session } from 'meteor/session';
 
 import '../imports/start/simpl-schema-config.js';
 import { routes, onAuthChanged } from '../imports/routes/routes';
+import '../imports/api/deals';
 
 Tracker.autorun(() => {
   const isAuth = !!Meteor.userId();
@@ -21,5 +22,6 @@ Tracker.autorun(() => {
 
 Meteor.startup(() => {
   Session.set('selLogId', undefined);
+  Session.set('displayVisible', true);
   ReactDOM.render(routes, document.getElementById('app'));
 });

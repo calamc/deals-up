@@ -24,3 +24,8 @@ momentjs:moment
 react-meteor-data@=0.2.9
 session
 uploadcare:uploadcare-widget
+aldeed:collection2-core
+twbs:bootstrap
+themeteorchef:bert
+mdg:validated-method
+jquery

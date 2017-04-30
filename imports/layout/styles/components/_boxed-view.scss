@@ -14,11 +14,28 @@
   justify-content: center;
 }
 
+.boxed-view--modal {
+  background: fade-out(#1abc9c, .3);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
 .boxed-view__whitebox {
   background-color: $boxed-view-whitebox;
   padding: 4.2rem;
   text-align: center;
   width: 32rem;
+  border: 1px solid $blue-sea;
+}
+
+.boxed-view__whitebox--dealform {
+  background-color: $boxed-view-whitebox;
+  padding: 2.2rem;
+  text-align: center;
+  width: 52rem;
   border: 1px solid $blue-sea;
 }
 

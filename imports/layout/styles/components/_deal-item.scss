@@ -1,0 +1,36 @@
+.deal-item {
+    max-width: 25rem;
+    display: inline-block;
+    font-size: 1.2rem;
+    padding: 1.4rem;
+    margin-right: 1.6rem;
+}
+
+.deal-item__Container {
+  margin: 0 auto;
+  background: #fff;
+  border: 1px solid $dark-grey;
+  margin-bottom: 1.4rem;
+  padding: 1.4rem;
+  max-width: 100rem;
+}
+
+.deal-item__Title {
+  font-size: 1.6rem;
+  font-style: italic;
+}
+
+.deal-item__Paragraph {
+  font-size: 1.2rem;
+}
+
+.highlight {
+  font-weight: 600;
+}
+
+.image {
+}
+
+.tilt {
+  font-style: italic;
+}

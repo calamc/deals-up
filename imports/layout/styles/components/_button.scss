@@ -9,6 +9,16 @@
   margin-bottom: $spacing;
   font-weight: 600;
 }
+.button-deal {
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  padding: 1.6rem;
+  text-transform: uppercase;
+  font-size: 2rem;
+  margin-bottom: 1.6rem;
+  font-weight: 300;
+}
 
 // modifier
 .btn--link {
@@ -56,4 +66,10 @@
   text-transform: none;
   background: none;
   font-weight: 400 !important;
+}
+
+.btn--close {
+  background: #e74c3c;
+  border: 1px solid $light-grey;
+  color: #fff;;
 }
