@@ -11,6 +11,8 @@ import Dashboard from '../ui/Dashboard';
 import Log from '../ui/Log';
 import Pnf from '../ui/Pnf';
 import Deal from '../ui/Deal';
+import PublicDealsList from '../ui/PublicDealsList';
+import PublicDealsMain from '../ui/PublicDealsMain';
 
 const onEnterDealPage = (nextState) => {
   Session.set('selectedDealId', nextState.params.id);
@@ -65,6 +67,7 @@ export const routes = (
   <Router history={browserHistory}>
     <Route onEnter={uniOnEnter} onChange={uniOnChange}>
       <Route path="/" component={Home}/>
+      <Route path="/deal/:dealId" component={PublicDealsMain} secure="unauth"/>
       <Route path="/signup" component={Signup} secure="unauth" />
       <Route path="/login" component={Login} secure="unauth" />
       <Route path="/dashboard" component={Dashboard} secure="auth" />

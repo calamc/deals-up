@@ -9,6 +9,9 @@ if (Meteor.isServer) {
   Meteor.publish('deals', function () {
     return Deals.find({ userId: this.userId });
   });
+  Meteor.publish('publicDeal', function () {
+    return Deals.find();
+  });
 }
 
 Meteor.methods({

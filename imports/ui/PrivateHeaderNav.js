@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router';
 import { Accounts } from 'meteor/accounts-base';
 import { createContainer } from 'meteor/react-meteor-data';
 
@@ -6,7 +7,7 @@ export const PrivateHeaderNav = (props) => {
     return (
       <div className="header">
         <div className="header__insideWrapper">
-          <h1 className="header__title">{props.title}</h1>
+          <Link to="/dashboard" className="header__title">{props.title}</Link>
           <button className="btn btn-dashboard-header-text" onClick={() => props.handleLogout()}>Log out</button>
         </div>
       </div>

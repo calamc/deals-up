@@ -25,7 +25,9 @@ export default class DealFilters extends React.Component {
       <div>
         <label className="checkbox">
           <input className="checkbox__box" type="checkbox" checked={!this.state.displayVisible} onChange={(e) => {
+
             Session.set('displayVisible', !e.target.checked);}}/>Display your hidden deals</label>
+            
       </div>
     );
   }
